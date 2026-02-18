@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>belajar-js</title>
+    <style>
+        .top-nav{
+        opacity: 0;
+        transition: opacity 1s ease;
+        display: none;
+        }
+
+        .top-nav.show{
+            opacity: 1;
+        }
+
+        .set{
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+
+        .set.show{
+            opacity: 1;
+        }
+
+        #floatingLinesRoot {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        body > .flex {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+  </head>
+  <body class="bg-linear-to-br from-black to-blue-950 w-full h-screen flex flex-col  text-white">
+    <div id="floatingLinesRoot"></div>
+
+    <div class="flex flex-col justify-center items-center flex-1 gap-4">
+        <h1 class="typing  text-lg text-amber-50  ">welcome to your journey</h1>
+        <button id="Get" class="set border-2 bg-amber-50 border-black rounded-2xl px-4 py-2 hover:bg-black hover:text-amber-50 transition mt-10">
+           <a href="peler.html">Get Start</a> 
+        </button>
+    </div>
+
+    <div id="app"></div>
+
+
+    <script type="module" src="script.js"></script>
+    <script type="module" src="/src/PelerApp.jsx"></script>
+  </body>
+</html>

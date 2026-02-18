@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #1f2937;;
+}
+body {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+body.fade-out {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.top-nav {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 22px;
+
+    }
+
+.logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ffffff;
+        margin-left: 10px;
+    }
+
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        color: #fbbf24;
+    }
+
+    .music-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 9999px;
+      border: 1px solid #4b5563;
+      background: rgba(17, 24, 39, 0.75);
+      color: #ffffff;
+      cursor: pointer;
+      transition: background 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+    }
+
+    .music-btn:hover {
+      background: rgba(55, 65, 81, 0.85);
+      border-color: #9ca3af;
+      transform: translateY(-1px);
+    }
+
+    .music-btn svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+    .typing {
+  width: 24ch;              /* jumlah karakter */
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid black;
+  animation:
+    typing 3s steps(24),
+    blink .7s step-end infinite;
+}
+
+    .typing1 {
+  width: 100%;              /* sesuaikan dengan panjang teks */
+  white-space: normal;
+  word-wrap: break-word;
+  border-right: 3px solid white;
+  animation:
+    typing1 8s steps(200),
+    blink .7s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 24ch }
+}
+
+@keyframes typing1 {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}

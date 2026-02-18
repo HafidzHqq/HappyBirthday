@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+.kejutan-bunga-intro,
+.kejutan-bunga-intro *{
+    font-family: 'Poppins',cursive;
+}
+.kejutan-bunga-intro{
+    color: azure;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+.kejutan-bunga-intro .greetings{
+    font-size: 6rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.08em;
+}
+.kejutan-bunga-intro .greetings > span{
+    display: inline-block;
+    animation: glow 2.5s ease-in-out infinite;
+}
+.kejutan-bunga-intro .greetings > span.greetings__space{
+    width: 0.5em;
+    animation: none;
+}
+@keyframes glow{
+    0%, 100%{
+        color: #fff;
+        text-shadow: 0 0 12px #39c6d6, 0 0 50px #39c6d6, 0 0 100px #39c6d6;
+    }
+    10%, 90%{
+        color: #111;
+        text-shadow: none;
+    }
+}
+.kejutan-bunga-intro .description{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.kejutan-bunga-intro .button button{
+    border: none;
+    border-radius: 9999px;
+    padding: 12px 22px;
+    font-size: 1rem;
+    color: #111;
+    background: #fff;
+    cursor: pointer;
+}
+
+@media screen and (max-width:574px){
+    .kejutan-bunga-intro .greetings{
+        font-size: 3rem;
+        font-weight: 500;
+        gap: 0.05em;
+    }
+    .kejutan-bunga-intro .description{
+        font-size: 1rem;
+    }
+    
+    .kejutan-bunga-intro .button button{
+        font-size: .5rem;
+    }
+}

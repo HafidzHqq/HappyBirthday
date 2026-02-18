@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li{
+            border: 1px solid white;
+            border-radius: 15px;
+            padding: 5px 10px;
+            align-items: center;
+        }
+
+        body {
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        #floatingLinesRoot {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        #mainApp {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            z-index: 1;
+        }
+
+        #kejutanRoot {
+            position: relative;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .top-nav {
+            position: fixed !important;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            max-width: 100vw;
+            height: auto;
+        }
+
+        .logo {
+            font-size: 20px;
+        }
+
+        .nav-links {
+            gap: 15px;
+        }
+
+        .nav-links li {
+            padding: 4px 8px;
+        }
+
+        /* Hide HTML navbar on mobile */
+        @media (max-width: 767px) {
+            .top-nav {
+                display: none !important;
+            }
+        }
+        
+    </style>
+
+    
+</head>
+<body class="bg-linear-to-br from-black to-blue-950 w-full h-full">
+
+    <div id="floatingLinesRoot"></div>
+
+    <nav id="navbar" class="top-nav ">
+        <div class="logo">QQ</div>
+
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="main.html">Flex</a></li>
+            <li><a href="peler.html">Grid</a></li>
+            <li><a href="pipe.html">Pipe</a></li>
+        </ul>
+
+        <button id="musicBtn" class="music-btn">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+            </svg>
+        </button>
+    </nav>
+
+    <audio id="bgMusic" loop>
+        <source src="public/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="mainApp"></div>
+    <div id="kejutanRoot"></div>
+
+    <script src="script.js"></script>
+    <script type="module" src="/src/MainApp.jsx"></script>
+    <script type="module" src="/src/PelerApp.jsx"></script>
+    <script type="module" src="/src/KejutanApp.jsx"></script>
+    
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        #floatingLinesRoot {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .top-nav {
+            position: relative;
+            z-index: 10;
+        }
+
+        .grid {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+
+    
+</head>
+<body class="bg-linear-to-br from-black to-blue-950 w-full h-full">
+
+    <div id="floatingLinesRoot"></div>
+
+    <nav id="navbar" class="top-nav">
+        <div class="logo">QQ</div>
+
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="main.html">Flex</a></li>
+            <li><a href="peler.html">Grid</a></li>
+            <li><a href="pipe.html">Pipe</a></li>
+        </ul>
+
+        <button id="musicBtn" class="music-btn">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+            </svg>
+        </button>
+    </nav>
+
+    <audio id="bgMusic" loop>
+        <source src="public/music.mp3" type="audio/mpeg">
+    </audio>
+
+<!-- Responsive Grid Container -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 p-4 h-screen lg:h-191.25 auto-rows-[200px] lg:auto-rows-auto lg:grid-rows-6">
+  <!-- Item 1 -->
+  <div class="col-span-1 lg:col-start-1 lg:col-span-1 lg:row-start-1 lg:row-span-3 bg-blue-500 text-white flex items-center justify-center font-semibold rounded overflow-hidden">
+    <img class="w-full h-full object-cover" src="/public/mage 2026-01-20 at 19.18.51.jpeg" alt="Foto">
+  </div>
+  <!-- Item 2 -->
+  <div class="col-span-1 lg:col-start-2 lg:col-span-1 lg:row-start-1 lg:row-span-3 text-white flex items-start justify-center font-semibold rounded pt-4">
+    <div class="flex flex-col gap-2 text-right px-4 text-white">
+      <h1 class="text-3xl font-bold mb-8">Dalam Diam</h1>
+      <p class="text-sm font-normal leading-relaxed ">Ia selalu berjalan setengah langkah di depanku.
+        Tidak jauh, tapi juga tidak terlalu dekat.
+        Jarak yang cukup aman untuk kusembunyikan rasa ini.
+        dan cukup dekat untuk membuatku bahagia.
+        Aku menikmati setiap detik saat melihatnya dari kejauhan.
+        Mungkin dia tidak pernah tahu, betapa aku mengaguminya dalam diam.
+        Tapi aku benar benar sungguh mencintainya.
+      </p>
+    </div>
+  </div>
+  <!-- Item 3 -->
+  <div class="col-span-1 lg:col-start-3 lg:col-span-1 lg:row-start-1 lg:row-span-3 bg-blue-500 text-white flex items-center justify-center font-semibold rounded">
+    <img class="w-full h-full object-cover" src="/public/b.jpg" alt="Foto">
+  </div>
+  <!-- Item 4 -->
+  <div class="col-span-1 lg:col-start-4 lg:col-span-1 lg:row-start-1 lg:row-span-3 bg-blue-500 text-white flex items-center justify-center font-semibold rounded overflow-hidden">
+    <video class="w-full h-full object-cover" controls autoplay muted loop playsinline>
+      <source src="public/Linkin Park - In The End (Mellen Gi & Tommee Profitt Remix).mp4" type="video/mp4">
+    </video>
+  </div>
+  <!-- Item 5 -->
+  <div class="col-span-1 sm:col-span-2 lg:col-start-1 lg:col-span-2 lg:row-start-4 lg:row-span-1 bg-blue-500 text-white flex items-center justify-center font-semibold rounded  ">
+    <img class="w-full h-full object-cover" src="public/mage 2026-01-20 at 19.18.51.jpeg" alt="Foto">
+  </div>
+  <!-- Item 6 -->
+  <div class="col-span-1 sm:col-span-2 lg:col-start-3 lg:col-span-2 lg:row-start-4 lg:row-span-1 bg-blue-500 text-white flex items-center justify-center font-semibold rounded overflow-hidden">
+    <iframe class="w-full h-full rounded" src="https://www.youtube.com/embed/b3Mm4wHMtjQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <!-- Item 7 -->
+  <div class="col-span-1 lg:col-start-5 lg:col-span-1 lg:row-start-1 lg:row-span-4 bg-blue-500 text-white flex items-center justify-center font-semibold rounded overflow-hidden">
+    <img class="w-full h-full object-cover" src="public/WhatsApp Image 2025-01-24 at 21.28.29_a5631034.jpg" alt="Foto">
+  </div>
+  <!-- Item 8 -->
+  <div class="col-span-1 sm:col-span-2 lg:col-start-1 lg:col-span-2 lg:row-start-5 lg:row-span-2 bg-blue-500 text-white flex items-center justify-center font-semibold rounded">
+    <img class="w-full h-full object-cover" src="public/h.jpeg" alt="Foto">
+  </div>
+  <!-- Item 9 -->
+  <div class="col-span-1 sm:col-span-2 lg:col-start-3 lg:col-span-2 lg:row-start-5 lg:row-span-2 bg-blue-500 text-white flex items-center justify-center font-semibold rounded">
+    <img class="w-full h-full object-cover" src="public/i.jpeg" alt="Foto">
+  </div>
+  <!-- Item 10 -->
+  <div class="col-span-1 lg:col-start-5 lg:col-span-1 lg:row-start-5 lg:row-span-2 bg-purple-400 text-white flex items-center justify-center font-semibold rounded">
+    <img class="w-full h-full object-cover" src="public/k.jpeg" alt="Foto">
+  </div>
+</div>
+    
+      <script src="script.js"></script>
+      <script type="module" src="/src/PelerApp.jsx"></script>
+</body>
+</html>
