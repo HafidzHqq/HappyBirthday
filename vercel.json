@@ -1,5 +1,9 @@
 {
   "rewrites": [
-    { "source": "/((?!.+\\.[\\w]+$|_next).*)", "destination": "/index.html" }
+    { "source": "/main.html", "destination": "/main.html" },
+    { "source": "/peler.html", "destination": "/peler.html" },
+    { "source": "/pipe.html", "destination": "/pipe.html" },
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
+
